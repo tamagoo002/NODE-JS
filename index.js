@@ -38,5 +38,5 @@
 
 // //require
 // //module.exports
-// const textmanipulater=require("./strng");
-// const {properCase,slugify,truncate};
+// const textmanipulater=require("./string");
+const { properCase, slugify, truncate } = require("./string");
