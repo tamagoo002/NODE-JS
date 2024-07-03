@@ -27,3 +27,14 @@ fs.readFile("myile.txt", "utf8", (err, data) => {
   if (err) throw err;
   console.log(data);
 });
+
+fs.writeFile("hello.txt", "hello", () => {});
+fs.writefile("hello2.txt", "helloo again", () => {});
+const fs = require("fs");
+const createdoc = (data, path) => {
+  return fs.writefilesync(path, data);
+};
+createdoc("hello", "./hello.txt");
+
+//require
+//module.exports
