@@ -44,4 +44,3 @@ module.exports = {
   slugify,
   truncate,
 };
-t driven design 
