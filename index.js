@@ -55,29 +55,46 @@
 // // emit/fire event
 // eventEmitter.emit("scream");
 
-//
-const events = require("events");
-const eventEmitter = new events.EventEmitter();
+//event handleer ma calculation ni halni
 
-// Create event handler for checkout
-const checkoutHandler = (orderId, amount) => {
-  // Simulate checkout process
-  console.log(`Processing checkout for order ${orderId}`);
-  console.log(`Amount: $${amount}`);
-  console.log("Adding VAT...");
+// const events = require("events");
+// const eventEmitter = new events.EventEmitter();
 
-  //  calculation
-  const vatRate = 0.13;
-  const vatAmount = amount * vatRate;
-  const totalAmount = amount + vatAmount;
+// // Create event handler for checkout
+// const checkoutHandler = (orderId, amount) => {
+//   //value
+//   console.log(`Processing checkout for order ${orderId}`);
+//   console.log(`Amount: $${amount}`);
+//   console.log("Adding VAT...");
 
-  console.log(`Total amount with VAT: $${totalAmount}`);
-};
+//   //  calculation
+//   const vatRate = 0.13;
+//   const vatAmount = amount * vatRate;
+//   const totalAmount = amount + vatAmount;
 
-// Assign handler
-eventEmitter.on("checkout", checkoutHandler);
+//   console.log(`Total amount with VAT: $${totalAmount}`);
+// };
 
-// Emit 'checkout' event with example data
-const orderId = "tshirt";
-const amount = 100;
-eventEmitter.emit("checkout", orderId, amount);
+// // Assign handler
+// eventEmitter.on("checkout", checkoutHandler);
+
+// // Emit 'checkout' event with example data
+// const orderId = "tshirt";
+// const amount = 100;
+// eventEmitter.emit("checkout", orderId, amount);
+
+////sir ko soln
+
+// const product = {
+//   name: "tshirt",
+//   price: 100,
+// };
+// const calcVat = (cart) => {
+//   const totalamt = 0.13 * cart?.price + cart?.price;
+//   console.log(`Total amount with VAT: $${totalamt}`);
+// };
+// eventEmitter.emit("checkout",(item)=>{
+//   calcVat(item);
+// });
+
+// eventEmitter.emit("checkout", product);
