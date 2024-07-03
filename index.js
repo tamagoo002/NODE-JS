@@ -23,6 +23,8 @@
 // const data = "Hello,world!";
 // fs.writeFile("myile.txt", data, () => {});
 
+const { properCase } = require("./string");
+
 // fs.readFile("myile.txt", "utf8", (err, data) => {
 //   if (err) throw err;
 //   console.log(data);
@@ -98,3 +100,11 @@
 // });
 
 // eventEmitter.emit("checkout", product);
+
+//NPM NODE PACKAGEMANAGER
+const properCase = require("proper-upper-case");
+const convert = (text) => {
+  return properCase(text);
+};
+const result = convert("jdhasha asakbdab ");
+console.log(result);
