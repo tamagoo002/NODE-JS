@@ -39,4 +39,18 @@
 // //require
 // //module.exports
 // const textmanipulater=require("./string");
-const { properCase, slugify, truncate } = require("./string");
+// const { properCase, slugify, truncate } = require("./string");
+
+const events = require("events");
+const eventEmitter = new events.EventEmitter();
+
+// create event handler
+const myeventhandler = () => {
+  console.log("I hear a scream");
+};
+
+// assign handler to event
+eventEmitter.on("scream", myeventhandler);
+
+// emit/fire event
+eventEmitter.emit("scream");
