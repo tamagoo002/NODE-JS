@@ -108,3 +108,10 @@ const convert = (text) => {
 };
 const result = convert("jdhasha asakbdab ");
 console.log(result);
+
+//package
+//slugify(slug generate)
+//loadash(trucate)
+//bcryptjs(password encrypt)
+//password verify decrypt
+//nodemailer
