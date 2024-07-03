@@ -74,7 +74,7 @@ const checkoutHandler = (orderId, amount) => {
   console.log(`Total amount with VAT: $${totalAmount}`);
 };
 
-// Assign handler to 'checkout' event
+// Assign handler
 eventEmitter.on("checkout", checkoutHandler);
 
 // Emit 'checkout' event with example data
