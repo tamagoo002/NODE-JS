@@ -54,3 +54,30 @@ eventEmitter.on("scream", myeventhandler);
 
 // emit/fire event
 eventEmitter.emit("scream");
+
+//
+const events = require("events");
+const eventEmitter = new events.EventEmitter();
+
+// Create event handler for checkout
+const checkoutHandler = (orderId, amount) => {
+  // Simulate checkout process
+  console.log(`Processing checkout for order ${orderId}`);
+  console.log(`Amount: $${amount}`);
+  console.log("Adding VAT...");
+
+  //  calculation
+  const vatRate = 0.13;
+  const vatAmount = amount * vatRate;
+  const totalAmount = amount + vatAmount;
+
+  console.log(`Total amount with VAT: $${totalAmount}`);
+};
+
+// Assign handler to 'checkout' event
+eventEmitter.on("checkout", checkoutHandler);
+
+// Emit 'checkout' event with example data
+const orderId = "tshirt";
+const amount = 100; // Example amount
+eventEmitter.emit("checkout", orderId, amount);
