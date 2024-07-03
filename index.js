@@ -41,19 +41,19 @@
 // const textmanipulater=require("./string");
 // const { properCase, slugify, truncate } = require("./string");
 
-const events = require("events");
-const eventEmitter = new events.EventEmitter();
+// const events = require("events");
+// const eventEmitter = new events.EventEmitter();
 
-// create event handler
-const myeventhandler = () => {
-  console.log("I hear a scream");
-};
+// // create event handler
+// const myeventhandler = () => {
+//   console.log("I hear a scream");
+// };
 
-// assign handler to event
-eventEmitter.on("scream", myeventhandler);
+// // assign handler to event
+// eventEmitter.on("scream", myeventhandler);
 
-// emit/fire event
-eventEmitter.emit("scream");
+// // emit/fire event
+// eventEmitter.emit("scream");
 
 //
 const events = require("events");
@@ -79,5 +79,5 @@ eventEmitter.on("checkout", checkoutHandler);
 
 // Emit 'checkout' event with example data
 const orderId = "tshirt";
-const amount = 100; // Example amount
+const amount = 100;
 eventEmitter.emit("checkout", orderId, amount);
